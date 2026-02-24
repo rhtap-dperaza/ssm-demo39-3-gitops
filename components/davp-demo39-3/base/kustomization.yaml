@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: davp-demo39-3
+  janus-idp.io/tekton: davp-demo39-3
+  backstage.io/kubernetes-id: davp-demo39-3
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: davp-demo39-3
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
